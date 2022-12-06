@@ -21,6 +21,11 @@ def main():
 
     while run:
         clock.tick(60)
-        
+
+        pygame.display.update()
+
         for event in pygame.event.get():
-            ...
+            if event == pygame.QUIT:
+                run = False
+
+    pygame.quit()

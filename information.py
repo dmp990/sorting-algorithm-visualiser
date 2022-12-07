@@ -17,12 +17,12 @@ class Information:
         pygame.display.set_caption=("Sorting Algorithms")
         self.set_list(lst)
 
-        def set_list(self, lst):
-            self.lst = lst
-            self.max_val = max(lst)
-            self.min_val = min(lst)
-            self.block_width = round((self.width - self.SIDE_PADDING) / len(lst))
-            self.block_height = round((self.height - self.TOP_PADDING) / (self.max_val - self.min_val))
-            self.start_x = self.SIDE_PAD // 2
-            
+    def set_list(self, lst):
+        self.lst = lst
+        self.max_val = max(lst)
+        self.min_val = min(lst)
+        self.block_width = round((self.width - self.SIDE_PADDING) / len(lst))
+        self.block_height = round((self.height - self.TOP_PADDING) / (self.max_val - self.min_val))
+        self.start_x = self.SIDE_PADDING // 2
+
 

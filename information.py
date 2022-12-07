@@ -1,4 +1,7 @@
 import pygame
+import math
+
+pygame.init()
 
 
 class Information:
@@ -15,6 +18,9 @@ class Information:
         (192, 192, 192)
     ]
 
+    FONT = pygame.font.SysFont('comicsans', 20)
+    LARGE_FONT = pygame.font.SysFont('comicsans', 30)
+
     SIDE_PADDING = 100
     TOP_PADDING = 100
 
@@ -30,6 +36,6 @@ class Information:
         self.max_val = max(lst)
         self.min_val = min(lst)
         self.block_width = round((self.width - self.SIDE_PADDING) / len(lst))
-        self.block_height = round(
+        self.block_height = math.floor(
             (self.height - self.TOP_PADDING) / (self.max_val - self.min_val))
         self.start_x = self.SIDE_PADDING // 2
